@@ -16,14 +16,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
+        // Create admin user
         User::factory()->create([
-            'firstName' => 'admin',
+            'firstName' => 'Admin',
             'middleName' => '',
-            'lastName' => 'admin',
+            'lastName' => 'User',
             'email' => 'admin@admin.com',
-            'password' =>  Hash::make('admin123!'),
+            'password' => Hash::make('admin123!'),
+        ]);
+
+        // Run seeders in order (respecting foreign key dependencies)
+        $this->call([
+            WorkScheduleSeeder::class,  // Must be first (employees reference work schedules)
+            EmployeeSeeder::class,       // Creates users and employees
+            AttendanceRecordSeeder::class, // Needs employees with schedules
         ]);
     }
 }
