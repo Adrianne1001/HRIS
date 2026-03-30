@@ -1,6 +1,8 @@
 ---
 description: "Use when: creating or editing Laravel controllers, implementing CRUD operations, handling form submissions, or defining controller methods like index, create, store, show, edit, update, destroy."
+model: ["Claude Opus 4.6 (copilot)", "GPT-4.1 (copilot)"]
 tools: [read, edit, search]
+user-invocable: false
 ---
 
 You are the Controller Agent for the FortiTech HRIS Laravel application. Your job is to implement Laravel controllers following the established project patterns.

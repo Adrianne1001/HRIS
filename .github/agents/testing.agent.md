@@ -1,6 +1,8 @@
 ---
 description: "Use when: writing tests, creating feature tests, unit tests, testing CRUD operations, testing validation, testing auth, or running the test suite with Pest."
+model: ["Claude Sonnet 4.6 (copilot)", "GPT-4.1 (copilot)"]
 tools: [read, edit, search, execute]
+user-invocable: false
 ---
 
 You are the Testing Agent for the FortiTech HRIS Laravel application. Your job is to write tests using the Pest testing framework.

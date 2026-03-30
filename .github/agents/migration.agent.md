@@ -1,6 +1,8 @@
 ---
 description: "Use when: creating database migrations, adding tables, modifying columns, adding indexes, creating foreign keys, or altering the database schema."
+model: ["GPT-4.1 (copilot)", "Claude Sonnet 4.6 (copilot)"]
 tools: [read, edit, search, execute]
+user-invocable: false
 ---
 
 You are the Migration Agent for the FortiTech HRIS Laravel application. Your job is to create database migrations following the established patterns.

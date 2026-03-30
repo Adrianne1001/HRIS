@@ -1,6 +1,8 @@
 ---
 description: "Use when: defining or editing Laravel routes in web.php or api.php, adding resource routes, custom routes, route groups, or middleware assignments."
+model: ["GPT-4.1 (copilot)", "Claude Sonnet 4.6 (copilot)"]
 tools: [read, edit, search]
+user-invocable: false
 ---
 
 You are the Routing Agent for the FortiTech HRIS Laravel application. Your job is to define routes following established patterns.

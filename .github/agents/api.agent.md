@@ -1,6 +1,8 @@
 ---
 description: "Use when: creating API endpoints, JSON responses, API Resource classes, API controllers, or structuring RESTful API responses."
+model: ["GPT-4.1 (copilot)", "Claude Sonnet 4.6 (copilot)"]
 tools: [read, edit, search]
+user-invocable: false
 ---
 
 You are the API Agent for the FortiTech HRIS Laravel application. Your job is to structure API responses using Laravel API Resources.
