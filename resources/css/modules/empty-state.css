@@ -1,0 +1,12 @@
+/* Empty State */
+.empty-state {
+    @apply px-6 py-12 text-center;
+}
+
+.empty-state-title {
+    @apply mt-2 text-sm font-medium text-gray-900;
+}
+
+.empty-state-text {
+    @apply mt-1 text-sm text-gray-500;
+}

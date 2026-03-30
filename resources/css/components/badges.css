@@ -1,0 +1,20 @@
+/* Status Badges */
+.badge {
+    @apply px-2 py-1 inline-flex text-xs font-semibold rounded-full;
+}
+
+.badge-success {
+    @apply bg-green-100 text-green-800 px-2 py-1 inline-flex text-xs font-semibold rounded-full;
+}
+
+.badge-danger {
+    @apply bg-red-100 text-red-800 px-2 py-1 inline-flex text-xs font-semibold rounded-full;
+}
+
+.badge-warning {
+    @apply bg-orange-100 text-orange-800 px-2 py-1 inline-flex text-xs font-semibold rounded-full;
+}
+
+.badge-info {
+    @apply bg-blue-100 text-blue-800 px-2 py-1 inline-flex text-xs font-semibold rounded-full;
+}

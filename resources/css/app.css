@@ -1,3 +1,14 @@
+@import 'layouts/page.css';
+@import 'layouts/grid.css';
+@import 'components/buttons.css';
+@import 'components/forms.css';
+@import 'components/cards.css';
+@import 'components/badges.css';
+@import 'components/modals.css';
+@import 'modules/tables.css';
+@import 'modules/alerts.css';
+@import 'modules/empty-state.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

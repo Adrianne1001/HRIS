@@ -1,0 +1,12 @@
+/* Grid Layouts */
+.form-grid-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.form-grid-3 {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.filter-bar {
+    @apply flex flex-col lg:flex-row lg:items-end gap-4;
+}
