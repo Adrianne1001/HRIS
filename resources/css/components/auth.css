@@ -1,0 +1,152 @@
+/* =============================================
+   Auth Layout — Split Screen
+   ============================================= */
+
+.auth-wrapper {
+    @apply min-h-screen flex;
+}
+
+/* --- Brand Panel (left, hidden on mobile) --- */
+
+.auth-brand-panel {
+    @apply hidden md:flex md:w-3/5 relative flex-col justify-between p-12 overflow-hidden bg-gradient-to-br from-indigo-800 to-indigo-600;
+}
+
+.auth-brand-logo-row {
+    @apply flex items-center gap-3 relative z-10;
+}
+
+.auth-brand-logo-svg {
+    @apply w-9 h-9 fill-current text-white;
+}
+
+.auth-brand-name {
+    @apply text-2xl font-bold text-white tracking-wide;
+}
+
+.auth-brand-content {
+    @apply flex-1 flex flex-col justify-center relative z-10;
+}
+
+.auth-brand-headline {
+    @apply text-4xl font-bold text-white leading-tight mb-4;
+}
+
+.auth-brand-subtitle {
+    @apply text-indigo-200 text-lg leading-relaxed mb-10;
+}
+
+.auth-brand-features {
+    @apply space-y-5;
+}
+
+.auth-brand-feature {
+    @apply flex items-center gap-4;
+}
+
+.auth-brand-feature-icon {
+    @apply w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.auth-brand-feature-icon-svg {
+    @apply w-5 h-5 text-white;
+}
+
+.auth-brand-feature-text {
+    @apply text-white font-medium text-base;
+}
+
+.auth-brand-decor {
+    @apply absolute inset-0 pointer-events-none;
+}
+
+.auth-brand-footer {
+    @apply text-indigo-300 text-xs relative z-10;
+}
+
+/* --- Form Panel (right) --- */
+
+.auth-form-panel {
+    @apply w-full md:w-2/5 flex items-center justify-center bg-white px-8 py-12;
+}
+
+.auth-form-container {
+    @apply w-full max-w-sm;
+}
+
+/* --- Mobile Logo (shown on small screens only) --- */
+
+.auth-mobile-logo {
+    @apply flex md:hidden items-center justify-center gap-2 mb-8;
+}
+
+.auth-mobile-logo-svg {
+    @apply w-8 h-8 fill-current text-indigo-600;
+}
+
+.auth-mobile-logo-name {
+    @apply text-xl font-bold text-indigo-700;
+}
+
+/* --- Form Typography --- */
+
+.auth-form-title {
+    @apply text-2xl font-bold text-gray-900;
+}
+
+.auth-form-subtitle {
+    @apply mt-1 text-sm text-gray-500 mb-6;
+}
+
+/* --- Form Structure --- */
+
+.auth-form-fields {
+    @apply space-y-4;
+}
+
+.auth-name-grid {
+    @apply grid grid-cols-2 gap-4;
+}
+
+/* --- Remember Me Row --- */
+
+.auth-remember-row {
+    @apply flex items-center justify-between;
+}
+
+.auth-remember-label {
+    @apply flex items-center gap-2 text-sm text-gray-600 cursor-pointer;
+}
+
+.auth-remember-checkbox {
+    @apply rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500;
+}
+
+/* --- Links --- */
+
+.auth-forgot-link {
+    @apply text-sm text-indigo-600 hover:text-indigo-800 font-medium transition;
+}
+
+/* --- Submit Button (full-width) --- */
+
+.auth-submit-btn {
+    @apply inline-flex items-center justify-center w-full px-4 py-2.5 bg-indigo-600 border border-transparent rounded-lg font-semibold text-sm text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition;
+}
+
+/* --- Divider --- */
+
+.auth-form-divider {
+    @apply my-5 border-t border-gray-200;
+}
+
+/* --- Footer Link Row --- */
+
+.auth-form-footer {
+    @apply text-center text-sm text-gray-500;
+}
+
+.auth-form-footer-link {
+    @apply font-medium text-indigo-600 hover:text-indigo-800 transition;
+}

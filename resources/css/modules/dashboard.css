@@ -1,0 +1,82 @@
+/* Dashboard stat cards */
+.stat-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6;
+}
+
+.stat-card {
+    @apply bg-white rounded-lg shadow-sm p-6 flex items-center;
+}
+
+.stat-card-icon-indigo {
+    @apply p-3 rounded-full bg-indigo-100 text-indigo-600 flex-shrink-0;
+}
+
+.stat-card-icon-green {
+    @apply p-3 rounded-full bg-green-100 text-green-600 flex-shrink-0;
+}
+
+.stat-card-icon-yellow {
+    @apply p-3 rounded-full bg-yellow-100 text-yellow-600 flex-shrink-0;
+}
+
+.stat-card-icon-purple {
+    @apply p-3 rounded-full bg-purple-100 text-purple-600 flex-shrink-0;
+}
+
+.stat-card-body {
+    @apply ml-4;
+}
+
+.stat-card-label {
+    @apply text-sm font-medium text-gray-500;
+}
+
+.stat-card-value {
+    @apply text-2xl font-semibold text-gray-900;
+}
+
+/* Dashboard layout */
+.dashboard-grid {
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-6;
+}
+
+.dashboard-widget {
+    @apply bg-white rounded-lg shadow-sm;
+}
+
+.dashboard-widget-header {
+    @apply p-6 border-b border-gray-200;
+}
+
+.dashboard-widget-body {
+    @apply p-6;
+}
+
+.dashboard-widget-title {
+    @apply text-lg font-semibold text-gray-900;
+}
+
+/* Quick actions */
+.quick-action-item {
+    @apply flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors;
+}
+
+.quick-action-icon-indigo {
+    @apply p-2 rounded-lg bg-indigo-100 text-indigo-600;
+}
+
+.quick-action-icon-green {
+    @apply p-2 rounded-lg bg-green-100 text-green-600;
+}
+
+.quick-action-icon-yellow {
+    @apply p-2 rounded-lg bg-yellow-100 text-yellow-600;
+}
+
+.quick-action-icon-purple {
+    @apply p-2 rounded-lg bg-purple-100 text-purple-600;
+}
+
+.quick-action-label {
+    @apply ml-3 text-sm font-medium text-gray-700;
+}

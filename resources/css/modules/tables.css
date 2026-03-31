@@ -11,14 +11,55 @@
     @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
 }
 
+.table-th-right {
+    @apply px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
 .table-row {
-    @apply hover:bg-gray-50;
+    @apply hover:bg-gray-50 transition-colors;
 }
 
 .table-cell {
     @apply px-6 py-4 whitespace-nowrap;
 }
 
+.table-cell-wrap {
+    @apply px-6 py-4;
+}
+
+.table-cell-text {
+    @apply text-sm text-gray-900;
+}
+
+.table-cell-sub {
+    @apply text-sm text-gray-500;
+}
+
 .table-actions {
     @apply flex items-center justify-end gap-2;
+}
+
+/* Avatar cell in table rows */
+.table-avatar-cell {
+    @apply flex items-center gap-4;
+}
+
+.table-avatar-placeholder {
+    @apply flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center;
+}
+
+.table-avatar-initials {
+    @apply text-indigo-700 font-medium text-sm;
+}
+
+.table-avatar-info {
+    /* spacing handled by parent .table-avatar-cell gap-4 */
+}
+
+.table-avatar-name {
+    @apply text-sm font-medium text-gray-900;
+}
+
+.table-avatar-sub {
+    @apply text-sm text-gray-500;
 }

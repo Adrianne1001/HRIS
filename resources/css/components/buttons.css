@@ -11,6 +11,35 @@
     @apply inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-lg font-semibold text-sm text-white hover:bg-red-700 transition;
 }
 
+.btn-success {
+    @apply inline-flex items-center px-4 py-2 bg-green-600 border border-transparent rounded-lg font-semibold text-sm text-white hover:bg-green-700 transition;
+}
+
+.btn-ghost {
+    @apply inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg font-semibold text-sm text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition;
+}
+
 .btn-filter {
     @apply inline-flex items-center px-4 py-2.5 bg-gray-600 border border-transparent rounded-lg font-semibold text-sm text-white hover:bg-gray-700 transition;
+}
+
+/* Icon action links */
+.action-view {
+    @apply text-gray-600 hover:text-gray-900;
+}
+
+.action-edit {
+    @apply text-indigo-600 hover:text-indigo-900;
+}
+
+.action-delete {
+    @apply text-red-600 hover:text-red-900;
+}
+
+.action-success {
+    @apply text-green-600 hover:text-green-900;
+}
+
+.action-success-static {
+    @apply text-green-400;
 }

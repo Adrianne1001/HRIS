@@ -4,5 +4,30 @@
 }
 
 .page-content {
-    @apply max-w-7xl mx-auto sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.page-content-md {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.page-content-sm {
+    @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Header Slot */
+.header-title {
+    @apply font-semibold text-xl text-gray-800 leading-tight;
+}
+
+.header-row {
+    @apply flex items-center gap-4;
+}
+
+.header-row-between {
+    @apply flex items-center justify-between;
+}
+
+.back-link {
+    @apply text-gray-500 hover:text-gray-700;
 }

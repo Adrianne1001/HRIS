@@ -4,7 +4,19 @@
 }
 
 .card-body {
-    @apply p-6;
+    @apply p-6 space-y-6;
+}
+
+.card-header {
+    @apply p-6 border-b border-gray-200;
+}
+
+.card-title {
+    @apply text-lg font-medium text-gray-900;
+}
+
+.card-subtitle {
+    @apply mt-1 text-sm text-gray-600;
 }
 
 .section-title {

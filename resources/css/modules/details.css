@@ -1,0 +1,46 @@
+/* Detail/Show page sections */
+.detail-list {
+    @apply space-y-4;
+}
+
+.detail-term {
+    @apply text-sm font-medium text-gray-500;
+}
+
+.detail-value {
+    @apply mt-1 text-sm text-gray-900;
+}
+
+.detail-value-link {
+    @apply mt-1 text-sm text-indigo-600 hover:text-indigo-900;
+}
+
+/* Profile header */
+.profile-avatar-lg {
+    @apply h-24 w-24 rounded-full bg-indigo-100 flex items-center justify-center ring-4 ring-indigo-50;
+}
+
+.profile-avatar-lg-img {
+    @apply h-24 w-24 rounded-full object-cover ring-4 ring-indigo-100;
+}
+
+.profile-avatar-lg-initials {
+    @apply text-indigo-700 font-bold text-2xl;
+}
+
+/* Schedule icon wrapper in show pages */
+.icon-box-sm {
+    @apply h-10 w-10 rounded-lg flex items-center justify-center;
+}
+
+.icon-box-md {
+    @apply h-12 w-12 rounded-lg flex items-center justify-center;
+}
+
+.icon-box-lg {
+    @apply h-16 w-16 rounded-lg flex items-center justify-center;
+}
+
+.info-box {
+    @apply bg-gray-50 rounded-lg p-4;
+}

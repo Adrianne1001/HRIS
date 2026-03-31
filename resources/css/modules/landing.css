@@ -1,0 +1,340 @@
+/* ============================================================
+   LANDING PAGE — Semantic CSS classes
+   All styles via @apply. No inline Tailwind in Blade files.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. NAVBAR
+   ------------------------------------------------------------ */
+
+.landing-nav {
+    @apply bg-white shadow-sm sticky top-0 z-50;
+}
+
+.landing-nav-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16;
+}
+
+.landing-nav-logo-row {
+    @apply flex items-center gap-3;
+}
+
+.landing-nav-logo-svg {
+    @apply w-8 h-8 text-indigo-600 flex-shrink-0;
+}
+
+.landing-nav-brand {
+    @apply text-xl font-bold text-gray-900 tracking-tight;
+}
+
+.landing-nav-links {
+    @apply hidden md:flex items-center gap-8;
+}
+
+.landing-nav-btn-login {
+    @apply inline-flex items-center px-4 py-2 text-sm font-medium text-indigo-600 border border-indigo-600 rounded-lg transition duration-200;
+}
+
+.landing-nav-btn-login:hover {
+    @apply bg-indigo-50;
+}
+
+.landing-nav-btn-register {
+    @apply inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg transition duration-200;
+}
+
+.landing-nav-btn-register:hover {
+    @apply bg-indigo-700;
+}
+
+/* ------------------------------------------------------------
+   2. HERO SECTION
+   ------------------------------------------------------------ */
+
+.landing-hero {
+    @apply bg-gradient-to-br from-indigo-900 to-indigo-700 text-white;
+}
+
+.landing-hero-inner {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center;
+}
+
+.landing-hero-badge {
+    @apply inline-flex items-center gap-2 bg-indigo-800 text-indigo-200 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6;
+}
+
+.landing-hero-headline {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white mb-6;
+}
+
+.landing-hero-subtext {
+    @apply text-lg text-indigo-200 leading-relaxed mb-8 max-w-lg;
+}
+
+.landing-hero-actions {
+    @apply flex flex-col sm:flex-row gap-4;
+}
+
+.landing-hero-btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-white text-indigo-700 font-semibold text-sm rounded-lg shadow-md transition duration-200;
+}
+
+.landing-hero-btn-primary:hover {
+    @apply bg-gray-100;
+}
+
+.landing-hero-btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-indigo-300 text-white font-semibold text-sm rounded-lg transition duration-200;
+}
+
+.landing-hero-btn-secondary:hover {
+    @apply bg-indigo-800 border-indigo-400;
+}
+
+.landing-hero-visual {
+    @apply grid grid-cols-2 gap-4;
+}
+
+.landing-hero-card {
+    @apply bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 rounded-xl p-5 flex flex-col items-start gap-2;
+}
+
+.landing-hero-card-icon {
+    @apply w-8 h-8 text-indigo-300;
+}
+
+.landing-hero-card-label {
+    @apply text-xs font-medium text-indigo-300 uppercase tracking-wide;
+}
+
+.landing-hero-card-value {
+    @apply text-2xl font-bold text-white;
+}
+
+/* ------------------------------------------------------------
+   3. FEATURES SECTION
+   ------------------------------------------------------------ */
+
+.landing-features {
+    @apply bg-white py-20 lg:py-28;
+}
+
+.landing-features-header {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-14;
+}
+
+.landing-features-label {
+    @apply inline-block text-xs font-semibold uppercase tracking-widest text-indigo-600 mb-3;
+}
+
+.landing-features-title {
+    @apply text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4;
+}
+
+.landing-features-subtitle {
+    @apply text-lg text-gray-500 max-w-2xl mx-auto;
+}
+
+.landing-features-grid {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.landing-feature-card {
+    @apply bg-white border border-gray-100 rounded-2xl p-7 shadow-sm transition duration-300;
+}
+
+.landing-feature-card:hover {
+    @apply shadow-lg -translate-y-1;
+}
+
+.landing-feature-icon-wrap {
+    @apply w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center mb-5;
+}
+
+.landing-feature-icon {
+    @apply w-6 h-6 text-indigo-600;
+}
+
+.landing-feature-name {
+    @apply text-base font-bold text-gray-900 mb-2;
+}
+
+.landing-feature-desc {
+    @apply text-sm text-gray-500 leading-relaxed;
+}
+
+/* ------------------------------------------------------------
+   4. STATS / HIGHLIGHT BAR
+   ------------------------------------------------------------ */
+
+.landing-stats {
+    @apply bg-indigo-50 py-16;
+}
+
+.landing-stats-inner {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center;
+}
+
+.landing-stat-item {
+    @apply flex flex-col items-center gap-1;
+}
+
+.landing-stat-value {
+    @apply text-4xl font-extrabold text-indigo-700;
+}
+
+.landing-stat-label {
+    @apply text-sm font-medium text-gray-500 uppercase tracking-wide;
+}
+
+/* ------------------------------------------------------------
+   5. WHY CHOOSE US SECTION
+   ------------------------------------------------------------ */
+
+.landing-why {
+    @apply bg-gray-50 py-20 lg:py-28;
+}
+
+.landing-why-grid {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center;
+}
+
+.landing-why-content {
+    @apply flex flex-col;
+}
+
+.landing-why-label {
+    @apply inline-block text-xs font-semibold uppercase tracking-widest text-indigo-600 mb-3;
+}
+
+.landing-why-heading {
+    @apply text-3xl sm:text-4xl font-extrabold text-gray-900 mb-5 leading-tight;
+}
+
+.landing-why-text {
+    @apply text-base text-gray-600 leading-relaxed mb-8;
+}
+
+.landing-why-list {
+    @apply space-y-4;
+}
+
+.landing-why-list-item {
+    @apply flex items-start gap-3 text-sm text-gray-700;
+}
+
+.landing-why-list-icon {
+    @apply w-5 h-5 text-green-500 flex-shrink-0 mt-0.5;
+}
+
+.landing-why-visual {
+    @apply flex flex-col gap-4;
+}
+
+.landing-why-card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-5;
+}
+
+.landing-why-card-row {
+    @apply flex items-center gap-4;
+}
+
+.landing-why-card-avatar {
+    @apply w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-sm flex-shrink-0;
+}
+
+.landing-why-card-info {
+    @apply flex flex-col;
+}
+
+.landing-why-card-name {
+    @apply text-sm font-semibold text-gray-900;
+}
+
+.landing-why-card-role {
+    @apply text-xs text-gray-500;
+}
+
+.landing-why-card-meta {
+    @apply mt-3 flex items-center gap-3 text-xs text-gray-400;
+}
+
+/* ------------------------------------------------------------
+   6. CTA SECTION
+   ------------------------------------------------------------ */
+
+.landing-cta {
+    @apply bg-indigo-700 py-20;
+}
+
+.landing-cta-inner {
+    @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center;
+}
+
+.landing-cta-headline {
+    @apply text-3xl sm:text-4xl font-extrabold text-white mb-4 leading-tight;
+}
+
+.landing-cta-subtext {
+    @apply text-lg text-indigo-200 mb-8;
+}
+
+.landing-cta-actions {
+    @apply flex flex-col sm:flex-row gap-4 justify-center;
+}
+
+.landing-cta-btn-primary {
+    @apply inline-flex items-center justify-center px-7 py-3.5 bg-white text-indigo-700 font-semibold text-sm rounded-lg shadow-md transition duration-200;
+}
+
+.landing-cta-btn-primary:hover {
+    @apply bg-gray-100;
+}
+
+.landing-cta-btn-secondary {
+    @apply inline-flex items-center justify-center px-7 py-3.5 border border-indigo-300 text-white font-semibold text-sm rounded-lg transition duration-200;
+}
+
+.landing-cta-btn-secondary:hover {
+    @apply bg-indigo-800 border-indigo-400;
+}
+
+/* ------------------------------------------------------------
+   7. FOOTER
+   ------------------------------------------------------------ */
+
+.landing-footer {
+    @apply bg-gray-900 py-12;
+}
+
+.landing-footer-inner {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6;
+}
+
+.landing-footer-brand {
+    @apply flex flex-col items-center md:items-start gap-1;
+}
+
+.landing-footer-brand-name {
+    @apply text-white font-bold text-lg;
+}
+
+.landing-footer-tagline {
+    @apply text-gray-400 text-sm;
+}
+
+.landing-footer-copy {
+    @apply text-gray-500 text-sm;
+}
+
+.landing-footer-links {
+    @apply flex items-center gap-6;
+}
+
+.landing-footer-link {
+    @apply text-gray-400 text-sm transition duration-200;
+}
+
+.landing-footer-link:hover {
+    @apply text-white;
+}

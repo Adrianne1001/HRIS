@@ -1,0 +1,21 @@
+/* Working days checkbox group */
+.checkbox-group {
+    @apply mt-3 flex flex-wrap gap-4;
+}
+
+/* Working Days Pills */
+.day-pill-active {
+    @apply bg-green-100 text-green-800 px-2 py-0.5 text-xs font-medium rounded;
+}
+
+.day-pill-inactive {
+    @apply bg-gray-100 text-gray-400 px-2 py-0.5 text-xs font-medium rounded;
+}
+
+.day-pill-lg-active {
+    @apply bg-green-100 text-green-800 px-4 py-2 text-sm font-medium rounded-lg;
+}
+
+.day-pill-lg-inactive {
+    @apply bg-gray-100 text-gray-400 px-4 py-2 text-sm font-medium rounded-lg;
+}

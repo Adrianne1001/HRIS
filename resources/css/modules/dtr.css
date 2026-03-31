@@ -1,0 +1,159 @@
+/* DTR (Daily Time Record) */
+.dtr-clock {
+    @apply text-center mb-8;
+}
+
+.dtr-clock-day {
+    @apply text-gray-500 text-sm uppercase tracking-wider;
+}
+
+.dtr-clock-date {
+    @apply text-3xl font-bold text-gray-900;
+}
+
+.dtr-clock-time {
+    @apply text-5xl font-bold text-indigo-600 mt-2;
+}
+
+.dtr-profile {
+    @apply text-center mb-8 pb-6 border-b border-gray-200;
+}
+
+.dtr-profile-avatar {
+    @apply flex items-center justify-center mb-4;
+}
+
+.dtr-profile-avatar-img {
+    @apply h-20 w-20 rounded-full object-cover border-4 border-indigo-100;
+}
+
+.dtr-profile-avatar-placeholder {
+    @apply h-20 w-20 rounded-full bg-indigo-100 flex items-center justify-center;
+}
+
+.dtr-profile-avatar-initials {
+    @apply text-2xl font-bold text-indigo-600;
+}
+
+.dtr-profile-name {
+    @apply text-xl font-semibold text-gray-900;
+}
+
+.dtr-profile-role {
+    @apply text-gray-500;
+}
+
+.dtr-schedule-strip {
+    @apply bg-gray-50 rounded-lg p-4 mb-6;
+}
+
+.dtr-schedule-label {
+    @apply text-sm font-medium text-gray-500 uppercase tracking-wider mb-3;
+}
+
+.dtr-schedule-grid {
+    @apply grid grid-cols-3 gap-4 text-center;
+}
+
+.dtr-schedule-item-label {
+    @apply text-xs text-gray-500;
+}
+
+.dtr-schedule-item-value {
+    @apply text-lg font-semibold text-gray-900;
+}
+
+/* DTR action buttons */
+.dtr-action-grid {
+    @apply grid grid-cols-2 gap-4;
+}
+
+.btn-dtr-in {
+    @apply w-full py-6 px-4 rounded-xl font-bold text-xl transition-all duration-200 bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+}
+
+.btn-dtr-out {
+    @apply w-full py-6 px-4 rounded-xl font-bold text-xl transition-all duration-200 bg-red-500 hover:bg-red-600 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+}
+
+.btn-dtr-disabled {
+    @apply w-full py-6 px-4 rounded-xl font-bold text-xl bg-gray-200 text-gray-400 cursor-not-allowed;
+}
+
+/* DTR record panels */
+.dtr-record-today {
+    @apply bg-indigo-50 border border-indigo-200 rounded-lg p-4 mb-6;
+}
+
+.dtr-record-overnight {
+    @apply bg-purple-50 border border-purple-200 rounded-lg p-4 mb-6;
+}
+
+.dtr-record-header-today {
+    @apply text-sm font-medium text-indigo-800 uppercase tracking-wider mb-3;
+}
+
+.dtr-record-header-overnight {
+    @apply text-sm font-medium text-purple-800 uppercase tracking-wider mb-3;
+}
+
+.dtr-record-grid {
+    @apply grid grid-cols-2 gap-4;
+}
+
+.dtr-record-item {
+    @apply text-center;
+}
+
+.dtr-record-label-today {
+    @apply text-xs text-indigo-600;
+}
+
+.dtr-record-label-overnight {
+    @apply text-xs text-purple-600;
+}
+
+.dtr-record-value-active {
+    @apply text-xl font-bold text-green-600;
+}
+
+.dtr-record-value-empty {
+    @apply text-xl font-bold text-gray-400;
+}
+
+.dtr-warning-strip {
+    @apply bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6;
+}
+
+/* Attendance Summary Cards */
+.summary-card {
+    @apply rounded-lg p-4 text-center;
+}
+
+.summary-card-gray {
+    @apply bg-gray-50;
+}
+
+.summary-card-green {
+    @apply bg-green-50;
+}
+
+.summary-card-blue {
+    @apply bg-blue-50;
+}
+
+.summary-card-purple {
+    @apply bg-purple-50;
+}
+
+.summary-card-red {
+    @apply bg-red-50;
+}
+
+.summary-card-label {
+    @apply text-sm;
+}
+
+.summary-card-value {
+    @apply text-2xl font-bold;
+}

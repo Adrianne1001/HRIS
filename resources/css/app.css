@@ -5,9 +5,15 @@
 @import 'components/cards.css';
 @import 'components/badges.css';
 @import 'components/modals.css';
+@import 'components/auth.css';
 @import 'modules/tables.css';
 @import 'modules/alerts.css';
 @import 'modules/empty-state.css';
+@import 'modules/details.css';
+@import 'modules/schedule.css';
+@import 'modules/dashboard.css';
+@import 'modules/dtr.css';
+@import 'modules/landing.css';
 
 @tailwind base;
 @tailwind components;
