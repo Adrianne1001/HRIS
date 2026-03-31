@@ -127,14 +127,45 @@
                     <span :class="expanded ? 'opacity-100 ml-3' : 'opacity-0 ml-0 w-0'" class="transition-all duration-300 whitespace-nowrap overflow-hidden">Attendance Calendar</span>
                 </a>
 
-                <!-- Leave Management -->
-                <a href="#" 
+                <!-- Leave Requests -->
+                <a href="{{ route('leave-requests.index') }}" 
                    class="flex items-center px-3 py-2.5 rounded-lg mb-1 transition-colors
-                          {{ request()->routeIs('leaves.*') ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-600' }}">
+                          {{ request()->routeIs('leave-requests.*') ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-600' }}">
                     <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
                     </svg>
-                    <span :class="expanded ? 'opacity-100 ml-3' : 'opacity-0 ml-0 w-0'" class="transition-all duration-300 whitespace-nowrap overflow-hidden">Leave Management</span>
+                    <span :class="expanded ? 'opacity-100 ml-3' : 'opacity-0 ml-0 w-0'" class="transition-all duration-300 whitespace-nowrap overflow-hidden">Leave Requests</span>
+                </a>
+
+                <!-- My Leave Balances -->
+                <a href="{{ route('leave-balances.index') }}" 
+                   class="flex items-center px-3 py-2.5 rounded-lg mb-1 transition-colors
+                          {{ request()->routeIs('leave-balances.index') ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-600' }}">
+                    <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                    </svg>
+                    <span :class="expanded ? 'opacity-100 ml-3' : 'opacity-0 ml-0 w-0'" class="transition-all duration-300 whitespace-nowrap overflow-hidden">My Balances</span>
+                </a>
+
+                <!-- Leave Types -->
+                <a href="{{ route('leave-types.index') }}" 
+                   class="flex items-center px-3 py-2.5 rounded-lg mb-1 transition-colors
+                          {{ request()->routeIs('leave-types.*') ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-600' }}">
+                    <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                    </svg>
+                    <span :class="expanded ? 'opacity-100 ml-3' : 'opacity-0 ml-0 w-0'" class="transition-all duration-300 whitespace-nowrap overflow-hidden">Leave Types</span>
+                </a>
+
+                <!-- Manage Balances -->
+                <a href="{{ route('leave-balances.manage') }}" 
+                   class="flex items-center px-3 py-2.5 rounded-lg mb-1 transition-colors
+                          {{ request()->routeIs('leave-balances.manage') ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-600' }}">
+                    <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span :class="expanded ? 'opacity-100 ml-3' : 'opacity-0 ml-0 w-0'" class="transition-all duration-300 whitespace-nowrap overflow-hidden">Manage Balances</span>
                 </a>
 
                 <!-- Overtime -->
@@ -161,24 +192,45 @@
             </button>
             
             <div x-show="expanded ? activeGroup === 'payroll' : true" x-collapse>
-                <!-- Payroll Processing -->
-                <a href="#" 
+                <!-- Payroll Periods -->
+                <a href="{{ route('payroll.index') }}" 
                    class="flex items-center px-3 py-2.5 rounded-lg mb-1 transition-colors
                           {{ request()->routeIs('payroll.*') ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-600' }}">
                     <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
                     </svg>
-                    <span :class="expanded ? 'opacity-100 ml-3' : 'opacity-0 ml-0 w-0'" class="transition-all duration-300 whitespace-nowrap overflow-hidden">Payroll</span>
+                    <span :class="expanded ? 'opacity-100 ml-3' : 'opacity-0 ml-0 w-0'" class="transition-all duration-300 whitespace-nowrap overflow-hidden">Payroll Periods</span>
                 </a>
 
-                <!-- Salary Structure -->
-                <a href="#" 
+                <!-- My Payslips -->
+                <a href="{{ route('payslips.index') }}" 
                    class="flex items-center px-3 py-2.5 rounded-lg mb-1 transition-colors
-                          {{ request()->routeIs('salary.*') ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-600' }}">
+                          {{ request()->routeIs('payslips.*') ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-600' }}">
                     <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                     </svg>
-                    <span :class="expanded ? 'opacity-100 ml-3' : 'opacity-0 ml-0 w-0'" class="transition-all duration-300 whitespace-nowrap overflow-hidden">Salary Structure</span>
+                    <span :class="expanded ? 'opacity-100 ml-3' : 'opacity-0 ml-0 w-0'" class="transition-all duration-300 whitespace-nowrap overflow-hidden">My Payslips</span>
+                </a>
+
+                <!-- Employee Loans -->
+                <a href="{{ route('employee-loans.index') }}" 
+                   class="flex items-center px-3 py-2.5 rounded-lg mb-1 transition-colors
+                          {{ request()->routeIs('employee-loans.*') ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-600' }}">
+                    <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                    </svg>
+                    <span :class="expanded ? 'opacity-100 ml-3' : 'opacity-0 ml-0 w-0'" class="transition-all duration-300 whitespace-nowrap overflow-hidden">Employee Loans</span>
+                </a>
+
+                <!-- Holidays -->
+                <a href="{{ route('holidays.index') }}" 
+                   class="flex items-center px-3 py-2.5 rounded-lg mb-1 transition-colors
+                          {{ request()->routeIs('holidays.*') ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-600' }}">
+                    <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" transform="translate(9,11) scale(0.35)"/>
+                    </svg>
+                    <span :class="expanded ? 'opacity-100 ml-3' : 'opacity-0 ml-0 w-0'" class="transition-all duration-300 whitespace-nowrap overflow-hidden">Holidays</span>
                 </a>
             </div>
         </div>

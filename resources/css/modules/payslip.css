@@ -1,0 +1,64 @@
+/* Payslip styles */
+.payslip-header {
+    @apply text-center mb-6 pb-4 border-b border-gray-200;
+}
+
+.payslip-company-name {
+    @apply text-2xl font-bold text-gray-900;
+}
+
+.payslip-period-name {
+    @apply text-lg font-medium text-indigo-600 mt-1;
+}
+
+.payslip-period-range {
+    @apply text-sm text-gray-500 mt-1;
+}
+
+.payslip-line-items {
+    @apply space-y-3;
+}
+
+.payslip-line-item {
+    @apply flex justify-between items-center py-1;
+}
+
+.payslip-line-label {
+    @apply text-sm text-gray-600;
+}
+
+.payslip-line-label-bold {
+    @apply text-sm font-semibold text-gray-900;
+}
+
+.payslip-line-amount {
+    @apply text-sm text-gray-900 text-right;
+}
+
+.payslip-line-amount-deduction {
+    @apply text-sm text-red-600 text-right;
+}
+
+.payslip-line-amount-bold {
+    @apply text-sm font-semibold text-gray-900 text-right;
+}
+
+.payslip-line-total {
+    @apply border-t border-gray-200 pt-3 mt-2;
+}
+
+.payslip-net-pay {
+    @apply border-t-2 border-gray-900 pt-4 mt-3;
+}
+
+.payslip-net-pay-label {
+    @apply text-lg font-bold text-gray-900;
+}
+
+.payslip-net-pay-amount {
+    @apply text-lg font-bold text-indigo-600 text-right;
+}
+
+.payslip-na-text {
+    @apply text-sm text-gray-500 italic;
+}

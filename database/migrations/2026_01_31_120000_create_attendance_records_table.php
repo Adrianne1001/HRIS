@@ -14,7 +14,8 @@ return new class extends Migration
     {
         Schema::create('attendance_records', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('employee_id')->constrained('employees')->onDelete('cascade');
+            $table->unsignedBigInteger('employee_id');
+            $table->foreign('employee_id')->references('employeeID')->on('employees')->onDelete('cascade');
             $table->date('workDate');
             $table->string('image')->nullable();
             $table->enum('inOrOut', ['In', 'Out'])->nullable();

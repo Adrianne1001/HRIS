@@ -1,0 +1,83 @@
+/* Leave Balance Cards (self-service) */
+.balance-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.balance-card-header {
+    @apply flex items-center justify-between mb-4;
+}
+
+.balance-card-title {
+    @apply text-lg font-semibold text-gray-900;
+}
+
+.balance-empty-text {
+    @apply text-center text-gray-500;
+}
+
+/* Progress bar */
+.progress-track {
+    @apply w-full bg-gray-200 rounded-full h-3 mb-4;
+}
+
+.progress-inner {
+    @apply flex h-3 rounded-full overflow-hidden;
+}
+
+.progress-used {
+    @apply bg-indigo-600 h-full;
+}
+
+.progress-pending {
+    @apply bg-yellow-400 h-full;
+}
+
+/* Balance stat rows */
+.balance-stats {
+    @apply space-y-2 text-sm;
+}
+
+.balance-stat-row {
+    @apply flex justify-between;
+}
+
+.balance-stat-label {
+    @apply text-gray-500;
+}
+
+.balance-stat-value {
+    @apply font-medium text-gray-900;
+}
+
+.balance-stat-value-used {
+    @apply font-medium text-indigo-600;
+}
+
+.balance-stat-value-pending {
+    @apply font-medium text-yellow-600;
+}
+
+.balance-stat-row-total {
+    @apply flex justify-between border-t border-gray-200 pt-2;
+}
+
+.balance-stat-label-total {
+    @apply text-gray-700 font-medium;
+}
+
+.balance-stat-value-available {
+    @apply font-bold text-green-600;
+}
+
+/* Manage page */
+.manage-toolbar {
+    @apply flex flex-col lg:flex-row lg:items-end gap-4;
+}
+
+.manage-toolbar-actions {
+    @apply lg:ml-auto;
+}
+
+.balance-fraction-sub {
+    @apply block text-xs;
+}

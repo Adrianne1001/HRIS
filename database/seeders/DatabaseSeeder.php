@@ -29,7 +29,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             WorkScheduleSeeder::class,  // Must be first (employees reference work schedules)
             EmployeeSeeder::class,       // Creates users and employees
+            LeaveTypeSeeder::class,
+            LeaveBalanceSeeder::class,
             AttendanceRecordSeeder::class, // Needs employees with schedules
+            DeductionTypeSeeder::class,
+            HolidaySeeder::class,
         ]);
     }
 }
