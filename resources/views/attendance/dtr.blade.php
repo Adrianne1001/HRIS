@@ -1,25 +1,12 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="header-title">
             {{ __('Daily Time Record') }}
         </h2>
     </x-slot>
 
     <div class="page-container">
         <div class="page-content">
-            {{-- Flash Messages --}}
-            @if (session('success'))
-                <div class="alert-success" role="alert">
-                    {{ session('success') }}
-                </div>
-            @endif
-
-            @if (session('error'))
-                <div class="alert-error" role="alert">
-                    {{ session('error') }}
-                </div>
-            @endif
-
             @if(!$employee)
                 {{-- No Employee Record Message --}}
                 <div class="card">

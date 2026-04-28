@@ -32,22 +32,22 @@
                             {{-- Name --}}
                             <div>
                                 <x-input-label for="name" :value="__('Name')" />
-                                <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $leaveType->name)" required autofocus />
-                                <x-input-error class="mt-2" :messages="$errors->get('name')" />
+                                <x-text-input id="name" name="name" type="text" :value="old('name', $leaveType->name)" required autofocus />
+                                <x-input-error :messages="$errors->get('name')" />
                             </div>
 
                             {{-- Code --}}
                             <div>
                                 <x-input-label for="code" :value="__('Code')" />
-                                <x-text-input id="code" name="code" type="text" class="mt-1 block w-full" :value="old('code', $leaveType->code)" required maxlength="50" />
-                                <x-input-error class="mt-2" :messages="$errors->get('code')" />
+                                <x-text-input id="code" name="code" type="text" :value="old('code', $leaveType->code)" required maxlength="50" />
+                                <x-input-error :messages="$errors->get('code')" />
                             </div>
 
                             {{-- Default Credits --}}
                             <div>
                                 <x-input-label for="defaultCredits" :value="__('Default Credits')" />
-                                <x-text-input id="defaultCredits" name="defaultCredits" type="number" step="0.01" class="mt-1 block w-full" :value="old('defaultCredits', $leaveType->defaultCredits)" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('defaultCredits')" />
+                                <x-text-input id="defaultCredits" name="defaultCredits" type="number" step="0.01" :value="old('defaultCredits', $leaveType->defaultCredits)" required />
+                                <x-input-error :messages="$errors->get('defaultCredits')" />
                             </div>
                         </div>
                     </div>
@@ -69,14 +69,14 @@
                             <div class="md:col-span-3">
                                 <x-input-label for="description" :value="__('Description')" />
                                 <textarea id="description" name="description" rows="3" class="form-select">{{ old('description', $leaveType->description) }}</textarea>
-                                <x-input-error class="mt-2" :messages="$errors->get('description')" />
+                                <x-input-error :messages="$errors->get('description')" />
                             </div>
 
                             {{-- Max Consecutive Days --}}
                             <div>
                                 <x-input-label for="maxConsecutiveDays" :value="__('Max Consecutive Days')" />
-                                <x-text-input id="maxConsecutiveDays" name="maxConsecutiveDays" type="number" class="mt-1 block w-full" :value="old('maxConsecutiveDays', $leaveType->maxConsecutiveDays)" />
-                                <x-input-error class="mt-2" :messages="$errors->get('maxConsecutiveDays')" />
+                                <x-text-input id="maxConsecutiveDays" name="maxConsecutiveDays" type="number" :value="old('maxConsecutiveDays', $leaveType->maxConsecutiveDays)" />
+                                <x-input-error :messages="$errors->get('maxConsecutiveDays')" />
                             </div>
 
                             {{-- Gender --}}
@@ -90,7 +90,7 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <x-input-error class="mt-2" :messages="$errors->get('gender')" />
+                                <x-input-error :messages="$errors->get('gender')" />
                             </div>
                         </div>
                     </div>

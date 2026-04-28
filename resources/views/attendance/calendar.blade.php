@@ -1,28 +1,28 @@
 <x-app-layout>
     <x-slot name="header">
-        <div class="flex items-center justify-between">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <div class="header-row-between">
+            <h2 class="header-title">
                 {{ __('Employee Attendance Calendar') }}
             </h2>
         </div>
     </x-slot>
 
-    <div class="py-8">
-        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="page-container">
+        <div class="page-content-wide">
             {{-- Filters Card --}}
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mb-6">
-                <div class="p-6">
-                    <form method="GET" action="{{ route('attendance.calendar') }}" class="flex flex-wrap items-end gap-4">
+            <div class="card mb-6">
+                <div class="card-body">
+                    <form method="GET" action="{{ route('attendance.calendar') }}" class="filter-bar">
                         {{-- Search Bar --}}
                         <div class="min-w-[280px]">
                             <x-input-label for="search" :value="__('Search Employee')" />
-                            <div class="relative mt-1">
-                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <div class="form-input-group mt-1">
+                                <div class="form-input-icon">
                                     <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                                     </svg>
                                 </div>
-                                <x-text-input id="search" name="search" type="text" class="block w-full pl-10" 
+                                <x-text-input id="search" name="search" type="text" class="pl-10" 
                                     placeholder="Search by name..." 
                                     :value="request('search')" />
                             </div>
@@ -31,7 +31,7 @@
                         {{-- Month/Year Selector --}}
                         <div>
                             <x-input-label for="month" :value="__('Month')" />
-                            <select id="month" name="month" class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                            <select id="month" name="month" class="form-select">
                                 @foreach(range(1, 12) as $m)
                                     <option value="{{ $m }}" @selected($month == $m)>
                                         {{ \Carbon\Carbon::create(null, $m)->format('F') }}
@@ -42,7 +42,7 @@
 
                         <div>
                             <x-input-label for="year" :value="__('Year')" />
-                            <select id="year" name="year" class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                            <select id="year" name="year" class="form-select">
                                 @foreach(range(date('Y') - 2, date('Y') + 1) as $y)
                                     <option value="{{ $y }}" @selected($year == $y)>{{ $y }}</option>
                                 @endforeach
@@ -52,7 +52,7 @@
                         {{-- Employee Filter --}}
                         <div class="min-w-[250px]">
                             <x-input-label for="employee_id" :value="__('Employee')" />
-                            <select id="employee_id" name="employee_id" class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                            <select id="employee_id" name="employee_id" class="form-select">
                                 <option value="">All Employees</option>
                                 @foreach($employees as $emp)
                                     <option value="{{ $emp->employeeID }}" @selected($selectedEmployeeId == $emp->employeeID)>
@@ -96,8 +96,8 @@
             </div>
 
             {{-- Legend --}}
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mb-6">
-                <div class="p-4">
+            <div class="card mb-6">
+                <div class="card-body">
                     <div class="flex flex-wrap items-center gap-6 text-sm">
                         <span class="font-medium text-gray-700">Legend:</span>
                         <span class="flex items-center gap-2">
@@ -140,8 +140,8 @@
                                 $workingDays = $employee->workSchedule->workingDaysArrayAttribute ?? [];
                             }
                         @endphp
-                        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                            <div class="p-6">
+                        <div class="card">
+                            <div class="card-body">
                                 {{-- Employee Header --}}
                                 <div class="flex items-center justify-between mb-6 pb-4 border-b border-gray-200">
                                     <div class="flex items-center gap-4">
@@ -439,8 +439,8 @@
                 </div>
 
                 @if($displayEmployees->isEmpty())
-                    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <div class="p-12 text-center">
+                    <div class="card">
+                        <div class="empty-state">
                             <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
                             </svg>
@@ -450,30 +450,30 @@
                 @endif
             @else
                 {{-- List/Table View --}}
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6">
+                <div class="card">
+                    <div class="card-body">
                         <h3 class="text-lg font-semibold text-gray-900 mb-4">
                             Attendance Records - {{ \Carbon\Carbon::create($year, $month)->format('F Y') }}
                         </h3>
 
                         <div class="overflow-x-auto">
-                            <table class="min-w-full divide-y divide-gray-200">
-                                <thead class="bg-gray-50">
+                            <table class="data-table">
+                                <thead class="table-header">
                                     <tr>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Employee</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Schedule</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Time In</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Time Out</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hours</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">OT</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                        <th class="table-th">Employee</th>
+                                        <th class="table-th">Date</th>
+                                        <th class="table-th">Schedule</th>
+                                        <th class="table-th">Time In</th>
+                                        <th class="table-th">Time Out</th>
+                                        <th class="table-th">Hours</th>
+                                        <th class="table-th">OT</th>
+                                        <th class="table-th">Status</th>
                                     </tr>
                                 </thead>
-                                <tbody class="bg-white divide-y divide-gray-200">
+                                <tbody class="divide-y divide-gray-200">
                                     @forelse($listRecords as $record)
-                                        <tr class="hover:bg-gray-50">
-                                            <td class="px-6 py-4 whitespace-nowrap">
+                                        <tr class="table-row">
+                                            <td class="table-cell">
                                                 <div class="flex items-center">
                                                     @if($record->employee->profilePic)
                                                         <img class="h-10 w-10 rounded-full object-cover" src="{{ Storage::url($record->employee->profilePic) }}" alt="">
@@ -490,14 +490,14 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="px-6 py-4 whitespace-nowrap">
-                                                <div class="text-sm text-gray-900">{{ \Carbon\Carbon::parse($record->workDate)->format('M d, Y') }}</div>
-                                                <div class="text-xs text-gray-500">{{ \Carbon\Carbon::parse($record->workDate)->format('l') }}</div>
+                                            <td class="table-cell">
+                                                <div class="table-cell-text">{{ \Carbon\Carbon::parse($record->workDate)->format('M d, Y') }}</div>
+                                                <div class="table-cell-sub text-xs">{{ \Carbon\Carbon::parse($record->workDate)->format('l') }}</div>
                                             </td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                            <td class="table-cell table-cell-sub">
                                                 {{ \Carbon\Carbon::parse($record->shiftTimeIn)->format('g:i A') }} - {{ \Carbon\Carbon::parse($record->shiftTimeOut)->format('g:i A') }}
                                             </td>
-                                            <td class="px-6 py-4 whitespace-nowrap">
+                                            <td class="table-cell">
                                                 @if($record->actualTimeIn)
                                                     <div class="text-sm text-gray-900">{{ \Carbon\Carbon::parse($record->actualTimeIn)->format('g:i A') }}</div>
                                                     <div class="text-xs text-gray-500">{{ \Carbon\Carbon::parse($record->actualTimeIn)->format('M d') }}</div>
@@ -505,7 +505,7 @@
                                                     <span class="text-sm text-gray-400">--</span>
                                                 @endif
                                             </td>
-                                            <td class="px-6 py-4 whitespace-nowrap">
+                                            <td class="table-cell">
                                                 @if($record->actualTimeOut)
                                                     <div class="text-sm text-gray-900">{{ \Carbon\Carbon::parse($record->actualTimeOut)->format('g:i A') }}</div>
                                                     <div class="text-xs text-gray-500">{{ \Carbon\Carbon::parse($record->actualTimeOut)->format('M d') }}</div>
@@ -513,10 +513,10 @@
                                                     <span class="text-sm text-gray-400">--</span>
                                                 @endif
                                             </td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium">
+                                            <td class="table-cell table-cell-text font-medium">
                                                 {{ $record->hoursWorked > 0 ? $record->formattedHoursWorked : '-' }}
                                             </td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                            <td class="table-cell text-sm">
                                                 @if($record->advanceOTHours > 0 || $record->afterShiftOTHours > 0)
                                                     <div class="space-y-1">
                                                         @if($record->advanceOTHours > 0)
@@ -534,7 +534,7 @@
                                                     <span class="text-gray-400">-</span>
                                                 @endif
                                             </td>
-                                            <td class="px-6 py-4 whitespace-nowrap">
+                                            <td class="table-cell">
                                                 @if($record->remarks)
                                                     <span class="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full
                                                         @if($record->remarks === 'Late') bg-red-100 text-red-800
@@ -553,7 +553,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="8" class="px-6 py-12 text-center text-gray-500">
+                                            <td colspan="8" class="empty-state">
                                                 <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
                                                 </svg>

@@ -15,13 +15,6 @@
 
     <div class="page-container">
         <div class="page-content">
-            {{-- Success Message --}}
-            @if (session('success'))
-                <div class="alert-success" role="alert">
-                    <span class="block sm:inline">{{ session('success') }}</span>
-                </div>
-            @endif
-
             {{-- Year Filter --}}
             <div class="card mb-6">
                 <div class="card-body">

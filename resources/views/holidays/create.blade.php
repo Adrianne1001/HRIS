@@ -26,16 +26,16 @@
                             {{-- Name --}}
                             <div>
                                 <x-input-label for="name" :value="__('Holiday Name')" />
-                                <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name')" required autofocus />
-                                <x-input-error class="mt-2" :messages="$errors->get('name')" />
+                                <x-text-input id="name" name="name" type="text" :value="old('name')" required autofocus />
+                                <x-input-error :messages="$errors->get('name')" />
                             </div>
 
                             {{-- Date --}}
                             <div>
                                 <x-input-label for="date" :value="__('Date')" />
-                                <x-text-input id="date" name="date" type="date" class="mt-1 block w-full"
+                                <x-text-input id="date" name="date" type="date"
                                     x-model="holidayDate" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('date')" />
+                                <x-input-error :messages="$errors->get('date')" />
                             </div>
 
                             {{-- Holiday Type --}}
@@ -49,16 +49,16 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <x-input-error class="mt-2" :messages="$errors->get('holidayType')" />
+                                <x-input-error :messages="$errors->get('holidayType')" />
                             </div>
 
                             {{-- Year --}}
                             <div>
                                 <x-input-label for="year" :value="__('Year')" />
-                                <x-text-input id="year" name="year" type="number" class="mt-1 block w-full"
+                                <x-text-input id="year" name="year" type="number"
                                     x-bind:value="holidayDate ? new Date(holidayDate).getFullYear() : '{{ old('year', date('Y')) }}'"
                                     required min="2000" max="2099" />
-                                <x-input-error class="mt-2" :messages="$errors->get('year')" />
+                                <x-input-error :messages="$errors->get('year')" />
                             </div>
                         </div>
                     </div>

@@ -5,12 +5,6 @@
 
     <div class="page-container">
         <div class="page-content">
-            @if (session('success'))
-                <div class="alert-success" role="alert">
-                    <span class="block sm:inline">{{ session('success') }}</span>
-                </div>
-            @endif
-
             @if($balances->isEmpty())
                 <div class="card">
                     <div class="card-body">

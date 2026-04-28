@@ -1,4 +1,6 @@
-/* Alert Messages */
+/* Alert Messages — Non-JS fallback for flash messages.
+ * Primary flash message UI is now handled by the toast-notifications component.
+ * These alert classes remain for backward compatibility. */
 .alert-success {
     @apply mb-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg;
 }

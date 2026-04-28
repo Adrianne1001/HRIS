@@ -14,20 +14,6 @@
 
     <div class="page-container">
         <div class="page-content">
-            {{-- Success Message --}}
-            @if (session('success'))
-                <div class="alert-success" role="alert">
-                    <span class="block sm:inline">{{ session('success') }}</span>
-                </div>
-            @endif
-
-            {{-- Error Message --}}
-            @if (session('error'))
-                <div class="alert-error" role="alert">
-                    <span class="block sm:inline">{{ session('error') }}</span>
-                </div>
-            @endif
-
             {{-- Summary Stats --}}
             <div class="stat-grid">
                 {{-- Total Gross Pay --}}

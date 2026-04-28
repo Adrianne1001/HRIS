@@ -20,7 +20,7 @@
                 {{-- Schedule Information --}}
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="text-lg font-medium text-gray-900">Schedule Information</h3>
+                        <h3 class="card-title">Schedule Information</h3>
                         <p class="card-subtitle">Define the work schedule details.</p>
                     </div>
 
@@ -28,25 +28,25 @@
                         {{-- Schedule Name --}}
                         <div>
                             <x-input-label for="name" :value="__('Schedule Name')" />
-                            <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" 
+                            <x-text-input id="name" name="name" type="text" 
                                 :value="old('name')" required autofocus placeholder="e.g., Regular Day Shift" />
-                            <x-input-error class="mt-2" :messages="$errors->get('name')" />
+                            <x-input-error :messages="$errors->get('name')" />
                         </div>
 
                         {{-- Work Hours --}}
                         <div class="form-grid-2">
                             <div>
                                 <x-input-label for="startTime" :value="__('Start Time')" />
-                                <x-text-input id="startTime" name="startTime" type="time" class="mt-1 block w-full" 
+                                <x-text-input id="startTime" name="startTime" type="time" 
                                     :value="old('startTime', '08:00')" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('startTime')" />
+                                <x-input-error :messages="$errors->get('startTime')" />
                             </div>
 
                             <div>
                                 <x-input-label for="endTime" :value="__('End Time')" />
-                                <x-text-input id="endTime" name="endTime" type="time" class="mt-1 block w-full" 
+                                <x-text-input id="endTime" name="endTime" type="time" 
                                     :value="old('endTime', '17:00')" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('endTime')" />
+                                <x-input-error :messages="$errors->get('endTime')" />
                             </div>
                         </div>
 
@@ -54,18 +54,18 @@
                         <div class="form-grid-2">
                             <div>
                                 <x-input-label for="startBreakTime" :value="__('Break Start Time')" />
-                                <x-text-input id="startBreakTime" name="startBreakTime" type="time" class="mt-1 block w-full" 
+                                <x-text-input id="startBreakTime" name="startBreakTime" type="time" 
                                     :value="old('startBreakTime', '12:00')" />
                                 <p class="form-hint-xs">Optional</p>
-                                <x-input-error class="mt-2" :messages="$errors->get('startBreakTime')" />
+                                <x-input-error :messages="$errors->get('startBreakTime')" />
                             </div>
 
                             <div>
                                 <x-input-label for="endBreakTime" :value="__('Break End Time')" />
-                                <x-text-input id="endBreakTime" name="endBreakTime" type="time" class="mt-1 block w-full" 
+                                <x-text-input id="endBreakTime" name="endBreakTime" type="time" 
                                     :value="old('endBreakTime', '13:00')" />
                                 <p class="form-hint-xs">Optional</p>
-                                <x-input-error class="mt-2" :messages="$errors->get('endBreakTime')" />
+                                <x-input-error :messages="$errors->get('endBreakTime')" />
                             </div>
                         </div>
 
@@ -94,7 +94,7 @@
                                     </label>
                                 @endforeach
                             </div>
-                            <x-input-error class="mt-2" :messages="$errors->get('workingDays')" />
+                            <x-input-error :messages="$errors->get('workingDays')" />
                         </div>
 
                         {{-- Set as Default --}}

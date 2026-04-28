@@ -22,3 +22,18 @@
 .section-title {
     @apply text-lg font-medium text-gray-900 mb-4 pb-2 border-b border-gray-200;
 }
+
+/* Card hover effect */
+.card-hover {
+    @apply transition-all duration-200 hover:shadow-md hover:-translate-y-0.5;
+}
+
+/* Card with left border accent */
+.card-bordered-indigo {
+    @apply border-l-4 border-indigo-500;
+}
+
+/* Compact card variant */
+.card-compact {
+    @apply p-4 space-y-4;
+}

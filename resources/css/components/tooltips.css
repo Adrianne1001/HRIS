@@ -1,0 +1,8 @@
+/* Sidebar Tooltips */
+.sidebar-tooltip {
+    @apply absolute left-full ml-2 px-3 py-1.5 bg-gray-900 text-white text-sm rounded-lg whitespace-nowrap opacity-0 pointer-events-none transition-opacity duration-200 z-50;
+}
+
+.sidebar-tooltip-visible {
+    @apply opacity-100;
+}

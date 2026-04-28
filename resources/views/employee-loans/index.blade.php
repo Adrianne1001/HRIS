@@ -15,20 +15,6 @@
 
     <div class="page-container">
         <div class="page-content">
-            {{-- Success Message --}}
-            @if (session('success'))
-                <div class="alert-success" role="alert">
-                    <span class="block sm:inline">{{ session('success') }}</span>
-                </div>
-            @endif
-
-            {{-- Error Message --}}
-            @if (session('error'))
-                <div class="alert-error" role="alert">
-                    <span class="block sm:inline">{{ session('error') }}</span>
-                </div>
-            @endif
-
             {{-- Filters --}}
             <div class="card mb-6">
                 <div class="card-body">
@@ -36,7 +22,7 @@
                         {{-- Search --}}
                         <div class="flex-1 lg:max-w-xs">
                             <x-input-label for="search" :value="__('Search')" />
-                            <x-text-input id="search" name="search" type="text" class="mt-1 block w-full"
+                            <x-text-input id="search" name="search" type="text"
                                 :value="request('search')" placeholder="Employee name..." />
                         </div>
 

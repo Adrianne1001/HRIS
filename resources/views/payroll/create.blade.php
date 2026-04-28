@@ -31,8 +31,8 @@
                             {{-- Period Name --}}
                             <div>
                                 <x-input-label for="name" :value="__('Period Name')" />
-                                <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name')" required autofocus placeholder="e.g. March 2026 - First Half" />
-                                <x-input-error class="mt-2" :messages="$errors->get('name')" />
+                                <x-text-input id="name" name="name" type="text" :value="old('name')" required autofocus placeholder="e.g. March 2026 - First Half" />
+                                <x-input-error :messages="$errors->get('name')" />
                             </div>
 
                             {{-- Period Type --}}
@@ -46,28 +46,28 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <x-input-error class="mt-2" :messages="$errors->get('periodType')" />
+                                <x-input-error :messages="$errors->get('periodType')" />
                             </div>
 
                             {{-- Start Date --}}
                             <div>
                                 <x-input-label for="startDate" :value="__('Start Date')" />
-                                <x-text-input id="startDate" name="startDate" type="date" class="mt-1 block w-full" :value="old('startDate')" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('startDate')" />
+                                <x-text-input id="startDate" name="startDate" type="date" :value="old('startDate')" required />
+                                <x-input-error :messages="$errors->get('startDate')" />
                             </div>
 
                             {{-- End Date --}}
                             <div>
                                 <x-input-label for="endDate" :value="__('End Date')" />
-                                <x-text-input id="endDate" name="endDate" type="date" class="mt-1 block w-full" :value="old('endDate')" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('endDate')" />
+                                <x-text-input id="endDate" name="endDate" type="date" :value="old('endDate')" required />
+                                <x-input-error :messages="$errors->get('endDate')" />
                             </div>
 
                             {{-- Pay Date --}}
                             <div>
                                 <x-input-label for="payDate" :value="__('Pay Date')" />
-                                <x-text-input id="payDate" name="payDate" type="date" class="mt-1 block w-full" :value="old('payDate')" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('payDate')" />
+                                <x-text-input id="payDate" name="payDate" type="date" :value="old('payDate')" required />
+                                <x-input-error :messages="$errors->get('payDate')" />
                             </div>
                         </div>
                     </div>

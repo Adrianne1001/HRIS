@@ -1,0 +1,158 @@
+/* Sidebar */
+.sidebar {
+    @apply fixed left-0 top-0 h-screen text-white flex flex-col transition-all duration-300 ease-in-out z-50 overflow-hidden;
+    background-color: theme('colors.indigo.700');
+}
+
+.sidebar-expanded {
+    @apply w-64;
+}
+
+.sidebar-collapsed {
+    @apply w-20;
+}
+
+/* Logo Area */
+.sidebar-logo-area {
+    @apply flex items-center h-16 px-5;
+    border-bottom: 1px solid theme('colors.indigo.600');
+}
+
+.sidebar-logo-icon {
+    @apply w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0;
+}
+
+.sidebar-logo-icon svg {
+    @apply w-6 h-6;
+    color: theme('colors.indigo.700');
+}
+
+.sidebar-brand {
+    @apply font-bold text-lg whitespace-nowrap transition-all duration-300 overflow-hidden;
+}
+
+.sidebar-brand-visible {
+    @apply opacity-100 ml-3;
+}
+
+.sidebar-brand-hidden {
+    @apply opacity-0 ml-0 w-0;
+}
+
+/* Navigation */
+.sidebar-nav {
+    @apply flex-1 overflow-y-auto overflow-x-hidden py-4;
+}
+
+.sidebar-section {
+    @apply px-3 mb-6;
+}
+
+.sidebar-section-label {
+    @apply px-3 text-xs font-semibold uppercase tracking-wider mb-2 transition-opacity duration-300 whitespace-nowrap;
+    color: theme('colors.indigo.300');
+}
+
+.sidebar-section-label-hidden {
+    @apply opacity-0;
+}
+
+.sidebar-section-btn {
+    @apply w-full flex items-center justify-between px-3 py-2 text-xs font-semibold uppercase tracking-wider transition-all duration-300;
+    color: theme('colors.indigo.300');
+}
+
+.sidebar-section-btn:hover {
+    @apply text-white;
+}
+
+.sidebar-section-btn-hidden {
+    @apply opacity-0 pointer-events-none h-0 py-0;
+}
+
+.sidebar-section-chevron {
+    @apply w-4 h-4 transition-transform;
+}
+
+.sidebar-section-chevron-open {
+    @apply rotate-180;
+}
+
+/* Links */
+.sidebar-link {
+    @apply flex items-center px-3 py-2.5 rounded-lg mb-1 transition-colors relative;
+    color: theme('colors.indigo.100');
+}
+
+.sidebar-link:hover {
+    background-color: theme('colors.indigo.600');
+}
+
+.sidebar-link-active {
+    background-color: theme('colors.indigo.800');
+    @apply text-white;
+}
+
+.sidebar-link-icon {
+    @apply w-6 h-6 flex-shrink-0;
+}
+
+.sidebar-link-text {
+    @apply transition-all duration-300 whitespace-nowrap overflow-hidden;
+}
+
+.sidebar-link-text-visible {
+    @apply opacity-100 ml-3;
+}
+
+.sidebar-link-text-hidden {
+    @apply opacity-0 ml-0 w-0;
+}
+
+/* Pin Toggle */
+.sidebar-pin-btn {
+    @apply p-3 transition-colors;
+    border-top: 1px solid theme('colors.indigo.600');
+}
+
+.sidebar-pin-btn:hover {
+    background-color: theme('colors.indigo.600');
+}
+
+.sidebar-pin-icon {
+    @apply w-5 h-5;
+}
+
+/* User Profile */
+.sidebar-user-profile {
+    @apply mt-3 pt-3;
+    border-top: 1px solid theme('colors.indigo.600');
+}
+
+.sidebar-user-avatar {
+    @apply w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0;
+    background-color: theme('colors.indigo.500');
+}
+
+.sidebar-user-name {
+    @apply text-sm font-medium text-white truncate whitespace-nowrap;
+}
+
+.sidebar-user-email {
+    @apply text-xs truncate whitespace-nowrap;
+    color: theme('colors.indigo.300');
+}
+
+.sidebar-user-chevron {
+    @apply ml-auto;
+    color: theme('colors.indigo.300');
+}
+
+/* Mobile Overlay */
+.sidebar-mobile-overlay {
+    @apply fixed inset-0 z-40 md:hidden;
+}
+
+.sidebar-mobile-backdrop {
+    @apply fixed inset-0 bg-gray-600 bg-opacity-75;
+}

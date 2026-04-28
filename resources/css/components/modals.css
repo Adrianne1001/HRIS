@@ -6,3 +6,29 @@
 .modal-content {
     @apply bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full;
 }
+
+/* Modal dialog panel */
+.modal-panel {
+    @apply inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:w-full;
+}
+
+/* Modal size variants */
+.modal-sm {
+    @apply sm:max-w-sm;
+}
+
+.modal-md {
+    @apply sm:max-w-md;
+}
+
+.modal-lg {
+    @apply sm:max-w-lg;
+}
+
+.modal-xl {
+    @apply sm:max-w-xl;
+}
+
+.modal-2xl {
+    @apply sm:max-w-2xl;
+}

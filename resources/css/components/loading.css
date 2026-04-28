@@ -1,0 +1,17 @@
+/* Loading States */
+.btn-loading {
+    @apply pointer-events-none opacity-75 cursor-wait;
+}
+
+/* Skeleton Loaders */
+.skeleton {
+    @apply bg-gray-200 rounded animate-pulse;
+}
+
+.skeleton-text {
+    @apply h-4 w-full bg-gray-200 rounded animate-pulse;
+}
+
+.skeleton-circle {
+    @apply rounded-full bg-gray-200 animate-pulse;
+}

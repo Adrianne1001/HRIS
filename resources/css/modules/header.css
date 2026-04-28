@@ -1,0 +1,20 @@
+/* Header Bar */
+.header-bar {
+    @apply bg-white shadow-sm sticky top-0 z-40;
+}
+
+.header-inner {
+    @apply flex items-center justify-between px-6 py-4;
+}
+
+.header-actions {
+    @apply flex items-center space-x-4;
+}
+
+.header-action-btn {
+    @apply p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg transition-colors;
+}
+
+.header-hamburger {
+    @apply p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors md:hidden;
+}

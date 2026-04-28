@@ -31,43 +31,43 @@
                             {{-- First Name --}}
                             <div>
                                 <x-input-label for="firstName" :value="__('First Name')" />
-                                <x-text-input id="firstName" name="firstName" type="text" class="mt-1 block w-full" :value="old('firstName')" required autofocus />
-                                <x-input-error class="mt-2" :messages="$errors->get('firstName')" />
+                                <x-text-input id="firstName" name="firstName" type="text" :value="old('firstName')" required autofocus />
+                                <x-input-error :messages="$errors->get('firstName')" />
                             </div>
 
                             {{-- Middle Name --}}
                             <div>
                                 <x-input-label for="middleName" :value="__('Middle Name')" />
-                                <x-text-input id="middleName" name="middleName" type="text" class="mt-1 block w-full" :value="old('middleName')" />
-                                <x-input-error class="mt-2" :messages="$errors->get('middleName')" />
+                                <x-text-input id="middleName" name="middleName" type="text" :value="old('middleName')" />
+                                <x-input-error :messages="$errors->get('middleName')" />
                             </div>
 
                             {{-- Last Name --}}
                             <div>
                                 <x-input-label for="lastName" :value="__('Last Name')" />
-                                <x-text-input id="lastName" name="lastName" type="text" class="mt-1 block w-full" :value="old('lastName')" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('lastName')" />
+                                <x-text-input id="lastName" name="lastName" type="text" :value="old('lastName')" required />
+                                <x-input-error :messages="$errors->get('lastName')" />
                             </div>
 
                             {{-- Email --}}
                             <div class="md:col-span-3">
                                 <x-input-label for="email" :value="__('Email Address')" />
-                                <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email')" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('email')" />
+                                <x-text-input id="email" name="email" type="email" :value="old('email')" required />
+                                <x-input-error :messages="$errors->get('email')" />
                             </div>
 
                             {{-- Password --}}
                             <div>
                                 <x-input-label for="password" :value="__('Password')" />
-                                <x-text-input id="password" name="password" type="password" class="mt-1 block w-full" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('password')" />
+                                <x-text-input id="password" name="password" type="password" required />
+                                <x-input-error :messages="$errors->get('password')" />
                             </div>
 
                             {{-- Confirm Password --}}
                             <div class="md:col-span-2">
                                 <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-                                <x-text-input id="password_confirmation" name="password_confirmation" type="password" class="mt-1 block w-full" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('password_confirmation')" />
+                                <x-text-input id="password_confirmation" name="password_confirmation" type="password" required />
+                                <x-input-error :messages="$errors->get('password_confirmation')" />
                             </div>
                         </div>
                     </div>
@@ -87,8 +87,8 @@
                             {{-- Date of Birth --}}
                             <div>
                                 <x-input-label for="dateOfBirth" :value="__('Date of Birth')" />
-                                <x-text-input id="dateOfBirth" name="dateOfBirth" type="date" class="mt-1 block w-full" :value="old('dateOfBirth')" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('dateOfBirth')" />
+                                <x-text-input id="dateOfBirth" name="dateOfBirth" type="date" :value="old('dateOfBirth')" required />
+                                <x-input-error :messages="$errors->get('dateOfBirth')" />
                             </div>
 
                             {{-- Gender --}}
@@ -102,7 +102,7 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <x-input-error class="mt-2" :messages="$errors->get('gender')" />
+                                <x-input-error :messages="$errors->get('gender')" />
                             </div>
 
                             {{-- Marital Status --}}
@@ -116,21 +116,21 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <x-input-error class="mt-2" :messages="$errors->get('maritalStatus')" />
+                                <x-input-error :messages="$errors->get('maritalStatus')" />
                             </div>
 
                             {{-- Phone Number --}}
                             <div>
                                 <x-input-label for="phoneNbr" :value="__('Phone Number')" />
-                                <x-text-input id="phoneNbr" name="phoneNbr" type="tel" class="mt-1 block w-full" :value="old('phoneNbr')" required placeholder="+63 9XX XXX XXXX" />
-                                <x-input-error class="mt-2" :messages="$errors->get('phoneNbr')" />
+                                <x-text-input id="phoneNbr" name="phoneNbr" type="tel" :value="old('phoneNbr')" required placeholder="+63 9XX XXX XXXX" />
+                                <x-input-error :messages="$errors->get('phoneNbr')" />
                             </div>
 
                             {{-- Address --}}
                             <div class="md:col-span-2">
                                 <x-input-label for="address" :value="__('Address')" />
-                                <x-text-input id="address" name="address" type="text" class="mt-1 block w-full" :value="old('address')" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('address')" />
+                                <x-text-input id="address" name="address" type="text" :value="old('address')" required />
+                                <x-input-error :messages="$errors->get('address')" />
                             </div>
                         </div>
                     </div>
@@ -158,7 +158,7 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <x-input-error class="mt-2" :messages="$errors->get('department')" />
+                                <x-input-error :messages="$errors->get('department')" />
                             </div>
 
                             {{-- Job Title / Position --}}
@@ -172,14 +172,14 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <x-input-error class="mt-2" :messages="$errors->get('jobTitle')" />
+                                <x-input-error :messages="$errors->get('jobTitle')" />
                             </div>
 
                             {{-- Hire Date --}}
                             <div>
                                 <x-input-label for="hireDate" :value="__('Hire Date')" />
-                                <x-text-input id="hireDate" name="hireDate" type="date" class="mt-1 block w-full" :value="old('hireDate', date('Y-m-d'))" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('hireDate')" />
+                                <x-text-input id="hireDate" name="hireDate" type="date" :value="old('hireDate', date('Y-m-d'))" required />
+                                <x-input-error :messages="$errors->get('hireDate')" />
                             </div>
 
                             {{-- Employment Status --}}
@@ -193,7 +193,7 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <x-input-error class="mt-2" :messages="$errors->get('employmentStatus')" />
+                                <x-input-error :messages="$errors->get('employmentStatus')" />
                             </div>
 
                             {{-- Employment Type --}}
@@ -207,7 +207,7 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <x-input-error class="mt-2" :messages="$errors->get('employmentType')" />
+                                <x-input-error :messages="$errors->get('employmentType')" />
                             </div>
 
                             {{-- Basic Monthly Salary --}}
@@ -218,9 +218,9 @@
                                         <span class="text-gray-500 sm:text-sm">₱</span>
                                     </div>
                                     <x-text-input id="basicMonthlySalary" name="basicMonthlySalary" type="number" step="0.01" min="0" 
-                                        class="block w-full pl-8" :value="old('basicMonthlySalary')" required placeholder="0.00" />
+                                        class="pl-8" :value="old('basicMonthlySalary')" required placeholder="0.00" />
                                 </div>
-                                <x-input-error class="mt-2" :messages="$errors->get('basicMonthlySalary')" />
+                                <x-input-error :messages="$errors->get('basicMonthlySalary')" />
                             </div>
 
                             {{-- Work Schedule --}}
@@ -241,7 +241,7 @@
                                         No work schedules available. <a href="{{ route('work-schedules.create') }}" class="text-indigo-600 hover:text-indigo-800">Create one</a>
                                     </p>
                                 @endif
-                                <x-input-error class="mt-2" :messages="$errors->get('workScheduleID')" />
+                                <x-input-error :messages="$errors->get('workScheduleID')" />
                             </div>
                         </div>
                     </div>
@@ -261,15 +261,15 @@
                             {{-- Emergency Contact Name --}}
                             <div>
                                 <x-input-label for="emergencyContactName" :value="__('Contact Name')" />
-                                <x-text-input id="emergencyContactName" name="emergencyContactName" type="text" class="mt-1 block w-full" :value="old('emergencyContactName')" />
-                                <x-input-error class="mt-2" :messages="$errors->get('emergencyContactName')" />
+                                <x-text-input id="emergencyContactName" name="emergencyContactName" type="text" :value="old('emergencyContactName')" />
+                                <x-input-error :messages="$errors->get('emergencyContactName')" />
                             </div>
 
                             {{-- Emergency Contact Phone --}}
                             <div>
                                 <x-input-label for="emergencyContactPhoneNbr" :value="__('Contact Phone Number')" />
-                                <x-text-input id="emergencyContactPhoneNbr" name="emergencyContactPhoneNbr" type="tel" class="mt-1 block w-full" :value="old('emergencyContactPhoneNbr')" placeholder="+63 9XX XXX XXXX" />
-                                <x-input-error class="mt-2" :messages="$errors->get('emergencyContactPhoneNbr')" />
+                                <x-text-input id="emergencyContactPhoneNbr" name="emergencyContactPhoneNbr" type="tel" :value="old('emergencyContactPhoneNbr')" placeholder="+63 9XX XXX XXXX" />
+                                <x-input-error :messages="$errors->get('emergencyContactPhoneNbr')" />
                             </div>
                         </div>
                     </div>

@@ -20,7 +20,7 @@
 }
 
 .table-row {
-    @apply hover:bg-gray-50 transition-colors;
+    @apply hover:bg-indigo-50/50 transition-colors;
 }
 
 .table-cell {
@@ -70,4 +70,14 @@
 
 .table-avatar-sub {
     @apply text-sm text-gray-500;
+}
+
+/* Alternating row colors */
+.table-row:nth-child(even) {
+    @apply bg-gray-50/50;
+}
+
+/* Sticky table header */
+.table-sticky-header {
+    @apply sticky top-0 z-10;
 }

@@ -32,12 +32,12 @@
                     <form action="{{ route('attendance.index') }}" method="GET" class="filter-bar">
                         <div>
                             <x-input-label for="from_date" :value="__('From Date')" />
-                            <x-text-input id="from_date" name="from_date" type="date" class="mt-1 block" 
+                            <x-text-input id="from_date" name="from_date" type="date" 
                                 :value="request('from_date')" />
                         </div>
                         <div>
                             <x-input-label for="to_date" :value="__('To Date')" />
-                            <x-text-input id="to_date" name="to_date" type="date" class="mt-1 block" 
+                            <x-text-input id="to_date" name="to_date" type="date" 
                                 :value="request('to_date')" />
                         </div>
                         <div class="flex gap-2">

@@ -150,3 +150,8 @@
 .auth-form-footer-link {
     @apply font-medium text-indigo-600 hover:text-indigo-800 transition;
 }
+
+/* Auth session status message */
+.auth-status-message {
+    @apply font-medium text-sm text-green-600;
+}

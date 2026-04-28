@@ -1,0 +1,12 @@
+/* Dropdown */
+.dropdown-link {
+    @apply block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out;
+}
+
+.dropdown-menu {
+    @apply rounded-md ring-1 ring-black ring-opacity-5 bg-white shadow-lg;
+}
+
+.dropdown-trigger {
+    @apply cursor-pointer;
+}

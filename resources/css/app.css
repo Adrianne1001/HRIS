@@ -6,6 +6,11 @@
 @import 'components/badges.css';
 @import 'components/modals.css';
 @import 'components/auth.css';
+@import 'components/toasts.css';
+@import 'components/tooltips.css';
+@import 'components/loading.css';
+@import 'components/tabs.css';
+@import 'components/dropdown.css';
 @import 'modules/tables.css';
 @import 'modules/alerts.css';
 @import 'modules/empty-state.css';
@@ -16,6 +21,9 @@
 @import 'modules/landing.css';
 @import 'modules/leave-balance.css';
 @import 'modules/payslip.css';
+@import 'modules/sidebar.css';
+@import 'modules/header.css';
+@import 'modules/responsive-table.css';
 
 @tailwind base;
 @tailwind components;

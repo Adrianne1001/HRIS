@@ -16,7 +16,7 @@
 }
 
 .form-error {
-    @apply mt-2 text-sm text-red-600;
+    @apply mt-2 text-sm text-red-600 space-y-1;
 }
 
 .form-hint {
@@ -61,4 +61,23 @@
 
 .salary-prefix {
     @apply pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500 sm:text-sm;
+}
+
+/* Textarea */
+.form-textarea {
+    @apply mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm;
+}
+
+/* Input with icon wrapper */
+.form-input-group {
+    @apply relative;
+}
+
+.form-input-icon {
+    @apply absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none;
+}
+
+.form-input-icon + .form-input,
+.form-input-icon + input {
+    @apply pl-10;
 }

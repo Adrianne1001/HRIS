@@ -80,3 +80,8 @@
 .quick-action-label {
     @apply ml-3 text-sm font-medium text-gray-700;
 }
+
+/* Stat card hover effect */
+.stat-card-hover {
+    @apply transition-all duration-200 hover:shadow-md hover:-translate-y-0.5;
+}

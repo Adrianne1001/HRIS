@@ -15,24 +15,10 @@
 
     <div class="page-container">
         <div class="page-content">
-            {{-- Success Message --}}
-            @if (session('success'))
-                <div class="alert-success" role="alert">
-                    <span class="block sm:inline">{{ session('success') }}</span>
-                </div>
-            @endif
-
-            {{-- Error Message --}}
-            @if (session('error'))
-                <div class="alert-error" role="alert">
-                    <span class="block sm:inline">{{ session('error') }}</span>
-                </div>
-            @endif
-
             {{-- Status Tabs --}}
             <div class="card mb-6">
                 <div class="border-b border-gray-200">
-                    <nav class="flex -mb-px">
+                    <nav class="tab-nav">
                         @php
                             $tabs = [
                                 'all' => 'All',
@@ -43,10 +29,9 @@
                         @endphp
                         @foreach($tabs as $key => $label)
                             <a href="{{ route('payroll.index', ['status' => $key]) }}"
-                               class="px-6 py-3 text-sm font-medium border-b-2 transition-colors
-                                      {{ $currentStatus === $key ? 'border-indigo-500 text-indigo-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300' }}">
+                               class="tab-item {{ $currentStatus === $key ? 'tab-item-active' : '' }}">
                                 {{ $label }}
-                                <span class="ml-1 {{ $currentStatus === $key ? 'bg-indigo-100 text-indigo-600' : 'bg-gray-100 text-gray-600' }} px-2 py-0.5 rounded-full text-xs">
+                                <span class="tab-badge {{ $currentStatus === $key ? 'tab-badge-active' : 'tab-badge-inactive' }}">
                                     {{ $counts[$key] }}
                                 </span>
                             </a>

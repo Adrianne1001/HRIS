@@ -31,8 +31,8 @@
                             <div class="card">
                                 <div class="card-body">
                                     <x-input-label for="rejectionReason" :value="__('Rejection Reason')" />
-                                    <textarea id="rejectionReason" name="rejectionReason" rows="3" class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" required>{{ old('rejectionReason') }}</textarea>
-                                    <x-input-error class="mt-2" :messages="$errors->get('rejectionReason')" />
+                                    <textarea id="rejectionReason" name="rejectionReason" rows="3" class="form-textarea" required>{{ old('rejectionReason') }}</textarea>
+                                    <x-input-error :messages="$errors->get('rejectionReason')" />
                                     <div class="mt-4">
                                         <button type="submit" class="btn-danger">Confirm Rejection</button>
                                     </div>
@@ -47,20 +47,6 @@
 
     <div class="page-container">
         <div class="page-content-md">
-            {{-- Success Message --}}
-            @if (session('success'))
-                <div class="alert-success" role="alert">
-                    <span class="block sm:inline">{{ session('success') }}</span>
-                </div>
-            @endif
-
-            {{-- Error Message --}}
-            @if (session('error'))
-                <div class="alert-error" role="alert">
-                    <span class="block sm:inline">{{ session('error') }}</span>
-                </div>
-            @endif
-
             {{-- Leave Request Information --}}
             <div class="card">
                 <div class="card-body">

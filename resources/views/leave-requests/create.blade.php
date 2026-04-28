@@ -43,7 +43,7 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <x-input-error class="mt-2" :messages="$errors->get('leaveTypeID')" />
+                                <x-input-error :messages="$errors->get('leaveTypeID')" />
                             </div>
 
                             {{-- Spacer for grid alignment --}}
@@ -52,15 +52,15 @@
                             {{-- Start Date --}}
                             <div>
                                 <x-input-label for="startDate" :value="__('Start Date')" />
-                                <x-text-input id="startDate" name="startDate" type="date" class="mt-1 block w-full" :value="old('startDate')" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('startDate')" />
+                                <x-text-input id="startDate" name="startDate" type="date" :value="old('startDate')" required />
+                                <x-input-error :messages="$errors->get('startDate')" />
                             </div>
 
                             {{-- End Date --}}
                             <div>
                                 <x-input-label for="endDate" :value="__('End Date')" />
-                                <x-text-input id="endDate" name="endDate" type="date" class="mt-1 block w-full" :value="old('endDate')" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('endDate')" />
+                                <x-text-input id="endDate" name="endDate" type="date" :value="old('endDate')" required />
+                                <x-input-error :messages="$errors->get('endDate')" />
                             </div>
 
                             {{-- Half-day Toggle --}}
@@ -78,15 +78,15 @@
                                         <option value="AM" @selected(old('halfDayPeriod') === 'AM')>AM (Morning)</option>
                                         <option value="PM" @selected(old('halfDayPeriod') === 'PM')>PM (Afternoon)</option>
                                     </select>
-                                    <x-input-error class="mt-2" :messages="$errors->get('halfDayPeriod')" />
+                                    <x-input-error :messages="$errors->get('halfDayPeriod')" />
                                 </div>
                             </div>
 
                             {{-- Reason --}}
                             <div class="md:col-span-2">
                                 <x-input-label for="reason" :value="__('Reason')" />
-                                <textarea id="reason" name="reason" rows="4" class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" required>{{ old('reason') }}</textarea>
-                                <x-input-error class="mt-2" :messages="$errors->get('reason')" />
+                                <textarea id="reason" name="reason" rows="4" class="form-textarea" required>{{ old('reason') }}</textarea>
+                                <x-input-error :messages="$errors->get('reason')" />
                             </div>
                         </div>
                     </div>

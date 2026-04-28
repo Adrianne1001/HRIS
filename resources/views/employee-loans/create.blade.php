@@ -33,7 +33,7 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <x-input-error class="mt-2" :messages="$errors->get('employeeID')" />
+                                <x-input-error :messages="$errors->get('employeeID')" />
                             </div>
 
                             {{-- Loan Type --}}
@@ -47,14 +47,14 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <x-input-error class="mt-2" :messages="$errors->get('loanType')" />
+                                <x-input-error :messages="$errors->get('loanType')" />
                             </div>
 
                             {{-- Reference Number --}}
                             <div>
                                 <x-input-label for="referenceNbr" :value="__('Reference Number')" />
-                                <x-text-input id="referenceNbr" name="referenceNbr" type="text" class="mt-1 block w-full" :value="old('referenceNbr')" />
-                                <x-input-error class="mt-2" :messages="$errors->get('referenceNbr')" />
+                                <x-text-input id="referenceNbr" name="referenceNbr" type="text" :value="old('referenceNbr')" />
+                                <x-input-error :messages="$errors->get('referenceNbr')" />
                             </div>
 
                             {{-- Loan Amount --}}
@@ -65,9 +65,9 @@
                                         <span class="text-gray-500 sm:text-sm">₱</span>
                                     </div>
                                     <x-text-input id="loanAmount" name="loanAmount" type="number" step="0.01" min="0"
-                                        class="block w-full pl-8" :value="old('loanAmount')" required placeholder="0.00" />
+                                        class="pl-8" :value="old('loanAmount')" required placeholder="0.00" />
                                 </div>
-                                <x-input-error class="mt-2" :messages="$errors->get('loanAmount')" />
+                                <x-input-error :messages="$errors->get('loanAmount')" />
                             </div>
 
                             {{-- Monthly Amortization --}}
@@ -78,30 +78,30 @@
                                         <span class="text-gray-500 sm:text-sm">₱</span>
                                     </div>
                                     <x-text-input id="monthlyAmortization" name="monthlyAmortization" type="number" step="0.01" min="0"
-                                        class="block w-full pl-8" :value="old('monthlyAmortization')" required placeholder="0.00" />
+                                        class="pl-8" :value="old('monthlyAmortization')" required placeholder="0.00" />
                                 </div>
-                                <x-input-error class="mt-2" :messages="$errors->get('monthlyAmortization')" />
+                                <x-input-error :messages="$errors->get('monthlyAmortization')" />
                             </div>
 
                             {{-- Start Date --}}
                             <div>
                                 <x-input-label for="startDate" :value="__('Start Date')" />
-                                <x-text-input id="startDate" name="startDate" type="date" class="mt-1 block w-full" :value="old('startDate')" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('startDate')" />
+                                <x-text-input id="startDate" name="startDate" type="date" :value="old('startDate')" required />
+                                <x-input-error :messages="$errors->get('startDate')" />
                             </div>
 
                             {{-- End Date --}}
                             <div>
                                 <x-input-label for="endDate" :value="__('End Date')" />
-                                <x-text-input id="endDate" name="endDate" type="date" class="mt-1 block w-full" :value="old('endDate')" />
-                                <x-input-error class="mt-2" :messages="$errors->get('endDate')" />
+                                <x-text-input id="endDate" name="endDate" type="date" :value="old('endDate')" />
+                                <x-input-error :messages="$errors->get('endDate')" />
                             </div>
 
                             {{-- Remarks --}}
                             <div class="md:col-span-2">
                                 <x-input-label for="remarks" :value="__('Remarks')" />
                                 <textarea id="remarks" name="remarks" rows="3" class="form-select">{{ old('remarks') }}</textarea>
-                                <x-input-error class="mt-2" :messages="$errors->get('remarks')" />
+                                <x-input-error :messages="$errors->get('remarks')" />
                             </div>
                         </div>
                     </div>

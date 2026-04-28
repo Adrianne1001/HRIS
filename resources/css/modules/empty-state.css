@@ -1,6 +1,6 @@
 /* Empty State */
 .empty-state {
-    @apply px-6 py-12 text-center;
+    @apply px-6 py-16 text-center;
 }
 
 .empty-state-title {
@@ -9,4 +9,14 @@
 
 .empty-state-text {
     @apply mt-1 text-sm text-gray-500;
+}
+
+/* Empty state icon wrapper */
+.empty-state-icon {
+    @apply mx-auto h-16 w-16 text-gray-300;
+}
+
+/* Empty state action area */
+.empty-state-action {
+    @apply mt-6;
 }

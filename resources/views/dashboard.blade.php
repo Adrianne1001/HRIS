@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="header-title">
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
@@ -8,7 +8,7 @@
     <!-- Stats Cards -->
     <div class="stat-grid">
         <!-- Total Employees -->
-        <div class="stat-card">
+        <div class="stat-card stat-card-hover">
             <div class="flex items-center">
                 <div class="stat-card-icon-indigo">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -23,7 +23,7 @@
         </div>
 
         <!-- Active Employees -->
-        <div class="stat-card">
+        <div class="stat-card stat-card-hover">
             <div class="flex items-center">
                 <div class="stat-card-icon-green">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -38,7 +38,7 @@
         </div>
 
         <!-- On Leave -->
-        <div class="stat-card">
+        <div class="stat-card stat-card-hover">
             <div class="flex items-center">
                 <div class="stat-card-icon-yellow">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,7 +53,7 @@
         </div>
 
         <!-- Departments -->
-        <div class="stat-card">
+        <div class="stat-card stat-card-hover">
             <div class="flex items-center">
                 <div class="stat-card-icon-purple">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,7 +76,7 @@
                 <h3 class="dashboard-widget-title">Recent Activity</h3>
             </div>
             <div class="dashboard-widget-body">
-                <p class="text-gray-500 text-center py-8">No recent activity</p>
+                <p class="empty-state-text">No recent activity</p>
             </div>
         </div>
 
