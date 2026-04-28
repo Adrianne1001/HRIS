@@ -1,9 +1,11 @@
 <button {{ $attributes->merge(['type' => 'submit', 'class' => 'btn-danger']) }}
     x-data="{ loading: false }"
     x-on:click="
-        if ($el.type === 'submit' && $el.closest('form')) {
-            loading = true;
-            $el.classList.add('btn-loading');
+        if ($el.type === 'submit' && $el.form && $el.form.reportValidity()) {
+            setTimeout(() => {
+                loading = true;
+                $el.classList.add('btn-loading');
+            }, 0);
         }
     "
     x-bind:disabled="loading">
